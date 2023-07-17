@@ -42,4 +42,4 @@ CREATE TABLE parcel_statuses (
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE UNIQUE INDEX parcel_statuses_status_id_parcel_id_idx ON parcel_statuses (status_id, parcel_id);
+CREATE UNIQUE INDEX parcel_statuses_status_id_parcel_id_time_idx ON parcel_statuses (status_id, parcel_id, time);
